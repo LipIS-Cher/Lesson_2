@@ -1,26 +1,21 @@
-public class Truck implements Transport {
+public class Truck extends EngineTransport{
 
-    private String modelName;
-    private int wheelsCount;
 
     public Truck(String modelName, int wheelsCount) {
-        this.modelName = modelName;
-        this.wheelsCount = wheelsCount;
+        super(modelName, wheelsCount);
     }
 
-    public String getModelName() {
-        return modelName;
+
+
+    public static void checkTruck(Truck truck){
+        System.out.println("Обслуживаем - " + truck.getModelName());
+        Transport.service(truck.getWheelsCount());
+        EngineTransport.checkEngine();
+        Truck.checkTrailer();
     }
 
-    public void setModelName(String modelName) {
-        this.modelName = modelName;
+    static void checkTrailer() {
+        System.out.println("Проверяем прицеп");
     }
 
-    public int getWheelsCount() {
-        return wheelsCount;
-    }
-
-    public void setWheelsCount(int wheelsCount) {
-        this.wheelsCount = wheelsCount;
-    }
 }
