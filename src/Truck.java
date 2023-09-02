@@ -7,14 +7,12 @@ public class Truck extends EngineTransport{
 
 
 
-    public static void checkTruck(Truck truck){
-        System.out.println("Обслуживаем - " + truck.getModelName());
-        Transport.service(truck.getWheelsCount());
-        EngineTransport.checkEngine();
-        Truck.checkTrailer();
+    public void service(){
+        super.service();
+        checkTrailer();
     }
 
-    static void checkTrailer() {
+    public void checkTrailer() {
         System.out.println("Проверяем прицеп");
     }
 

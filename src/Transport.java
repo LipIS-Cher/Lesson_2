@@ -23,10 +23,11 @@ abstract class Transport {
     public void setWheelsCount(int wheelsCount) {
         this.wheelsCount = wheelsCount;
     }
-    static void service(int wheelsCount) {
-         for (int i = 0; i < wheelsCount; i++) {
-             System.out.println("Меняем покрышку");
-         }
+    public void service() {
+        System.out.println("Проверяем - " + modelName);
+        for (int i = 0; i < wheelsCount; i++) {
+            System.out.println("Меняем покрышку");
+        }
     }
 
 }

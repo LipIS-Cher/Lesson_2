@@ -12,8 +12,9 @@ public class Main{
 
 
 
-        Car.checkCar((Car) car);
-        Truck.checkTruck((Truck) truck);
-        Bicycle.checkBicycle((Bicycle) bicycle);
+        ServiceStation station = new ServiceStation();
+        station.check(car);
+        station.check(truck);
+        station.check(bicycle);
     }
 }

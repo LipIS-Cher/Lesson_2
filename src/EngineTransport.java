@@ -4,8 +4,12 @@ abstract class EngineTransport extends Transport{
         super(modelName, wheelsCount);
     }
 
-    public static void checkEngine(){
+    public void checkEngine(){
         System.out.println("Проверяем двигатель");
     }
 
+    public void service() {
+        super.service();
+        checkEngine();
+    }
 }
